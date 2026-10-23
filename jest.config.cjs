@@ -5,7 +5,8 @@ module.exports = {
     '^.+\\.(t|j)sx?$': ['@swc/jest', { jsc: { transform: { react: { runtime: 'automatic' } } } }],
   },
   moduleNameMapper: {
-    '\\.(css|svg)$': 'identity-obj-proxy',
+    '\\.css$': 'identity-obj-proxy',
+    '\\.(png|jpe?g|gif|webp|avif|svg)$': '<rootDir>/src/test/fileMock.cjs',
     '^@/(.*)$': '<rootDir>/src/$1',
   },
 };
